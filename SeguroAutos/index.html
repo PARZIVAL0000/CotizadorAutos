@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Seguro de Autos</title>
+</head>
+<body>
+    <div class="contenedor seguroAutos">
+        <div class="seguroAutos_encabezado">
+            <header>
+                <h1>Cotiza tu seguro de autos</h1>
+            </header>
+        </div>
+        <div class="seguroAutos_formulario">
+            <form action="#" method="POST" class="formulario" enctype="application/x-www-form-urlencoded">
+                <div class="campo">
+                    <label for="Marca">Marca:</label>
+                    <select name="MarcaAuto" id="Marca">
+                        <option value="">--Selecciona Marca--</option>
+                        <option value="1">Americano</option>
+                        <option value="2">Asiatico</option>
+                        <option value="3">Europeo</option>
+                    </select>
+                
+                </div><!--.campo-->
+
+                <div class="campo">
+                    <label for="Year">Año:</label>
+                    <select name="year" id="Year">
+                        <!-- Generamos los Años con JavaScript -->
+                    </select>
+                </div>
+
+                <!-- Generaremos en esta parte un snipper... -->
+
+                
+                <h2 class="formulario-Heading">Tipo Seguro</h2>
+
+                
+
+                <div class="formulario_tipoSeguro">
+                    
+                    <div class="campo">
+                        <label for="Basico">Basico</label>
+                        <input id="Basico" value="Basico" type="radio" name="tipoSeguro" checked>
+                    </div>
+                    <div class="campo">
+                        <label for="Completo">Completo</label>
+                        <input id="Completo" value="Completo" type="radio" name="tipoSeguro">
+                    </div>
+                </div>
+                <div class="resultado"></div>
+
+                <div class="load" id="hidden">
+                    <div id="load"></div>
+                    <div id="load2"></div>
+                    <div id="load3"></div>
+                    <div id="load4"></div>
+                    <div id="load5"></div>
+                </div>
+
+                <input type="submit" value="Cotizar Seguro" class="boton boton-cotizar">
+            </form>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

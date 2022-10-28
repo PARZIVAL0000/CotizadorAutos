@@ -1,0 +1,364 @@
+html{
+    font-size:62.5%;
+    box-sizing:border-box;
+}
+
+*,*::before, *::after{
+    box-sizing:inherit;
+}
+
+body{
+    font-size:1.5rem;
+    background-image:linear-gradient(to right,#904e95 0%,#e96443 100%);
+}
+
+h1{
+    margin:0rem;
+    font-weight: 400;
+}
+
+/* Errores. */
+
+.error{
+    background-color:rgba(245, 68, 68, 0.45);
+    color: #ae2121;
+    padding: 1rem;
+    width: 47rem;
+    text-align: center;
+    border: 1px solid #de1414;
+}
+
+.exito{
+    background-color: rgba(71, 238, 71, 0.52);
+    padding: 1rem;
+    width: 47rem;
+    text-align: center;
+    color: #026e02;
+    border: 1px solid #026e02;
+}
+
+.resultado{
+    border:1px solid rgb(21, 205, 196);
+    margin:1.5rem;
+}
+
+.resultado_heading{
+    background-color: rgb(21, 205, 196);
+    width: 40rem;
+    color: rgb(255 255 255);
+    font-weight: lighter;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 1rem;
+    margin:0;
+}
+
+.resultado p{
+    font-family:sans-serif;
+    font-weight:400;
+    padding-left:1.8rem;
+}
+
+.resultado p > span{
+    font-family:sans-serif;
+    font-weight:lighter;
+}
+
+.contenedor{
+    max-width:120rem;
+    width:95%;
+    margin:0 auto;
+}
+
+.seguroAutos{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top:5%;
+    box-shadow: 0px 11px 27px rgb( 0 0 0);
+}
+
+.seguroAutos_encabezado{
+    background-color:rgb(24, 172, 172);
+    color:rgb(255 255 255);
+    font-family:sans-serif;
+    width: 100%;
+   
+    text-align: center;
+    font-size:1.2rem;
+    padding:1.2rem;
+    
+}
+
+/* Formulario */
+
+.seguroAutos_formulario{
+    background-color:rgb(255 255 255);
+    width: 100%;
+    height: 100%;
+}
+
+.seguroAutos_formulario .formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+}
+
+.seguroAutos_formulario .formulario .campo{
+    display:flex;
+    flex-direction:row;
+    gap:2rem;
+    margin-bottom:1rem;
+    align-items:center
+}
+
+
+.seguroAutos_formulario .formulario .campo > label{
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform:uppercase;
+    width:10rem;
+}
+
+.seguroAutos_formulario .formulario .campo > select{
+    border: none;
+    width:50rem;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: .9rem;
+}
+
+.seguroAutos_formulario .formulario .formulario-Heading{
+    color:rgb( 0 0 0);
+    font-family:sans-serif;
+    font-size:3.0rem;
+    font-weight: 500;
+}
+
+/* Formulario-TipoSeguro? */
+
+.seguroAutos_formulario .formulario .formulario_tipoSeguro{
+    display:flex;
+    gap:5rem;
+}
+
+
+.boton{
+    border: none;
+    padding: 1.5rem;
+    width: 20rem;
+    margin: 2rem;
+    font-size: 1.8rem;
+    border-radius:.5rem;
+}
+
+
+.boton-cotizar{
+    background-color:rgb(24, 172, 172);
+    color:rgb(255 255 255);
+    transition:background-color 360ms ease;
+}
+
+.boton-cotizar:hover{
+    cursor:pointer;
+    background-color:rgb(30, 202, 202);
+}
+
+
+/** Creando un Load. */
+.load{
+    display:flex;
+    gap:1rem;
+    align-items:baseline;
+    width: 6.2rem;
+    height:7rem;
+    margin:1rem;
+}
+
+#hidden{
+    display:none;
+}
+
+#load{
+    animation-name:load;
+    animation-duration:3s;
+    animation-delay: -1s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+
+
+    background-color:rgb(21, 205, 196);
+    position:relative;
+    bottom:1rem;
+    top:1rem;
+    height:2rem;
+    width:1rem;
+}
+@keyframes load{
+    /** Porcentajes*/
+    5%{
+           background-color: rgba(21, 205, 196, .6);
+            top:1rem;
+            bottom:2rem;
+            height: 3rem;
+            width: 1rem;
+    }
+
+    10%{
+        background-color: rgba(21, 205, 196, .7);
+
+        height: 5rem;
+        width: 1rem;
+    }
+
+    15%{
+        background-color: rgba(21, 205, 196, .6);
+
+        height: 3rem;
+        width: 1rem;
+    }
+
+    20%{
+        background-color: rgba(21, 205, 196, .7);
+
+        height: 5rem;
+        width: 1rem;
+    }
+}
+
+#load2{
+    animation-name: load2;
+    animation-duration:3s;
+    animation-delay: -1s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+
+    background-color: rgba(21, 205, 196, .6);
+    position:relative;
+    bottom:1.5rem;
+    top:2rem;
+    height: 3rem;
+    width: 1rem;
+}
+@keyframes load2{
+    5%{
+        background-color: rgba(21, 205, 196, .7);
+        height: 4rem;
+        width: 1rem;
+    }
+
+    10%{
+
+        background-color: rgba(21, 205, 196, .7);
+        height: 6rem;
+        width: 1rem;
+    }
+
+    15%{
+        background-color: rgba(21, 205, 196, .7);
+        height: 2rem;
+        width: 1rem;
+    }
+
+}
+
+
+#load3{
+    animation-name:load3;
+    animation-delay:-1s;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+     animation-timing-function:linear;
+
+    background-color: rgba(21, 205, 196, .7);
+    position:relative;
+    bottom:1rem;
+    top:3rem;
+    height: 5rem;
+    width: 1rem;
+}
+@keyframes load3{
+    0%{
+         background-color: rgba(21, 205, 196, .7);
+        height: 2rem;
+        width: 1rem;
+    }
+}
+
+#load4{
+    animation-name:load4;
+    animation-delay:-1s;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+     animation-timing-function:linear;
+
+    background-color: rgba(21, 205, 196, .4);
+    position:relative;
+    bottom:1rem;
+    top:2rem;
+    height: 3rem;
+    width: 1rem;
+}
+@keyframes load4{
+    0%{
+        background-color: rgba(21, 205, 196, .4);
+        height: 5rem;
+        width: 1rem;
+    }
+
+    10%{
+        background-color: rgba(21, 205, 196, .4);
+        height: 6rem;
+        width: 1rem;
+    }
+
+
+    15%{
+        background-color: rgba(21, 205, 196, .4);
+        height: 5rem;
+        width: 1rem;
+    }
+
+    20%{
+        background-color: rgba(21, 205, 196, .4);
+        height: 3rem;
+        width: 1rem;
+    }
+
+}
+
+#load5{
+    animation-name:load5;
+    animation-delay:-1s;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+
+    background-color: rgba(21, 205, 196, .6);
+    position:relative;
+    bottom:1rem;
+    top:1rem;
+    height: 2rem;
+    width: 1rem;
+}
+@keyframes load5{
+
+    0%{
+        background-color: rgba(21, 205, 196, .6);
+        height: 4rem;
+        width: 1rem;
+    }
+
+    10%{
+        background-color: rgba(21, 205, 196, .6);
+        height: 6rem;
+        width: 1rem;
+    }
+
+    15%{
+        background-color: rgba(21, 205, 196, .6);
+        height: 5rem;
+        width: 1rem;
+    }
+}
